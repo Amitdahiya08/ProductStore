@@ -18,7 +18,7 @@ const EditForm = ({ product, onClose }) => {
     });
 
     const onSubmit = (values) => {
-        const apiUrl = `http://localhost:8080/api/products/${product._id}`;
+        const apiUrl = `https://productstore-0p51.onrender.com/api/products/${product._id}`;
 
         fetch(apiUrl, {
             method: "PUT",

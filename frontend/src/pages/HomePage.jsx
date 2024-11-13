@@ -8,7 +8,7 @@ const Homepage = () => {
 
     const fetchProducts = async () => {
         try {
-            const response = await fetch("http://localhost:8080/api/products");
+            const response = await fetch("https://productstore-0p51.onrender.com/api/products");
             const data = (await response.json()).data;
             console.log(data);
             setProducts(data); 
@@ -24,12 +24,12 @@ const Homepage = () => {
     const fallbackImage = 'https://via.placeholder.com/150?text=Image+Not+Available';
 
     const handleEdit = (product) => {
-        setSelectedProduct(product); // Set product for editing and open modal
+        setSelectedProduct(product); 
     };
 
     const handleDelete = (id) => {
         console.log(id);
-        const apiUrl = `http://localhost:8080/api/products/${id}`;
+        const apiUrl = `https://productstore-0p51.onrender.com/api/products/${id}`;
         fetch(apiUrl, {
             method: 'DELETE',
             headers: {
